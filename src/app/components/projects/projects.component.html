@@ -1,0 +1,39 @@
+<section class="projects">
+  <div class="project-grid">
+    <div class="project" *ngFor="let project of projects">
+      <div class="project-details">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.description }}</p>
+        <a [href]="project.link" target="_blank" class="view-project">View Project</a>
+
+    
+
+        <!-- Display Technologies -->
+        <div class="technologies" *ngIf="project.showTechnologies">
+          <div *ngFor="let tech of project.technologies" class="tech-badge">
+            {{ tech }}
+          </div>
+        </div>
+
+        <!-- Image Gallery with Thumbnails -->
+        <div class="image-gallery">
+          <div *ngFor="let image of project.album; let i = index" class="thumbnail">
+            <img [src]="image" (click)="openModal(image, i)" alt="Project Image" class="gallery-thumbnail">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal for Zoomed Image -->
+<div class="modal" *ngIf="selectedImage" (click)="closeModal()">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">×</span>
+    <img class="modal-image" [src]="selectedImage" alt="Zoomed Image">
+    <div class="modal-navigation">
+      <button (click)="navigateImage('prev')" class="modal-nav-button">&#10094;</button>
+      <button (click)="navigateImage('next')" class="modal-nav-button">&#10095;</button>
+    </div>
+  </div>
+</div>

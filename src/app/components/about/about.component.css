@@ -1,0 +1,232 @@
+
+.about {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .about-image {
+    flex: 1;
+    max-width: 350px;  
+    padding: 20px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-content {
+    flex: 2;
+    max-width: 700px;
+    color: #333;
+  }
+  
+  .about-content h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contact-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  }
+  
+  .education {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .education-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .education h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 40px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .timeline-dot {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+  }
+  
+  .timeline-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 30px);
+  }
+  
+  .timeline-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-content .location,
+  .timeline-content .dates {
+    font-size: 16px;
+    color: #777;
+    margin-top: 5px;
+  }
+  
+  .timeline::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: #ddd;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  
+  @media (max-width: 768px) {
+    .education h2 {
+      font-size: 28px;
+    }
+  
+    .timeline-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .timeline-content h3 {
+      font-size: 20px;
+    }
+  
+    .timeline-content .location,
+    .timeline-content .dates {
+      font-size: 14px;
+    }
+  
+    .timeline {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  
+  .bubbles-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
+  
+  .bubble {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 30px;
+    width: 300px; /* Make bubbles wider */
+    height: 250px; /* Increase the height of the bubbles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .bubble img {
+    border-radius: 20%;
+    width: 100px; /* Increase image size */
+    height: 200px; /* Increase image size */
+    object-fit: contain;
+    margin-bottom: 10px; /* Space between image and text */
+  }
+  
+  .bubble h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #34495e;
+  }
+  
+  .bubble:hover {
+    transform: scale(1.1); /* Slightly larger hover effect */
+  }
+  
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  

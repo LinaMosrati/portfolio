@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #1e3c72, #2a69ac); /* Gradient background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    max-width: 600px; /* Limit content width for better readability */
+  }
+  
+  h1 {
+    font-size: 3rem; /* Large font size for the name */
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease; /* Animation for the heading */
+  }
+  
+  p {
+    font-size: 1.5rem; /* Medium font size for the description */
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease; /* Animation for the paragraph */
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.2rem; /* Button font size */
+    color: #fff;
+    background-color: #2a69ac; /* Button background color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Button effects */
+  }
+  
+  .btn:hover {
+    background-color: #1e3c72; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End in place */
+    }
+  }
+  
